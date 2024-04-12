@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Game Exchange</h1>
+  <button id="open-form">Add Game</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add a New Game</h2>
+      <form id="add-game-form">
+        <input type="text" id="game-name" placeholder="Game title" />
+        <input type="text" id="owner-name" placeholder="User name"/>
+        <input type="number" id="owner-number" placeholder="Owner number" />
+        <input type="text" id="game-platform" placeholder="Game platform" /> 
+        <input type="url" id="game-url" placeholder="Game image URL" /> 
+        <button type="submit">Add Game</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="games-container" class="games-container"></div>
+  <script src="index.js"></script>
+</body>
+</html> 

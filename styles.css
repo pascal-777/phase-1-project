@@ -1,0 +1,29 @@
+body {
+  align-content: center;
+  background-image: url("https://images.stockcake.com/public/8/3/5/8359f083-461f-48fb-84a6-4c81d575fca7_large/gaming-nostalgia-overload-stockcake.jpg") ;
+  background-size: cover;
+  position: relative;
+  line-height: 1.6;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  display: inline-block; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
