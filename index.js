@@ -1,4 +1,4 @@
-// index.js
+
 const openFormButton = document.getElementById("open-form");
 const modal = document.getElementById("modal");
 const closeButton = document.querySelector(".close");
@@ -24,12 +24,12 @@ window.addEventListener("click", (event) => {
   }
 });
 
-// Fetch games from the server and display them
+
 function fetchAndDisplayGames() {
   fetch("http://localhost:3000/games")
     .then((response) => response.json())
     .then((games) => {
-      gamesContainer.innerHTML = ""; // Clear the games container
+      gamesContainer.innerHTML = ""; 
       games.forEach((game) => {
         const card = createGameCard(game);
         gamesContainer.appendChild(card);
@@ -37,10 +37,10 @@ function fetchAndDisplayGames() {
     });
 }
 
-// Initial fetch and display of games
+
 fetchAndDisplayGames();
 
-// Add a new game to the server and update the list
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const newGame = {
@@ -57,21 +57,21 @@ form.addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then((game) => {
-      fetchAndDisplayGames(); // Fetch and display updated games list
+      fetchAndDisplayGames();
       gameNameInput.value = "";
       ownerNameInput.value = "";
       ownerNumberInput.value = "";
       gamePlatformInput.value = "";
       gameUrlInput.value = "";
-      modal.style.display = "none"; // Close the modal after adding game
+      modal.style.display = "none"; 
     });
 });
 
-// Remove a game from the server and update the list
+
 function removeGame(id) {
   fetch(`http://localhost:3000/games/${id}`, { method: "DELETE" })
     .then(() => {
-      fetchAndDisplayGames(); // Fetch and display updated games list
+      fetchAndDisplayGames(); 
     })
     .catch((error) => console.error(error));
 }
